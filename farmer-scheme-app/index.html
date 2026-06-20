@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Farmer Scheme Eligibility Agent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green-900:#0b3d2e;
+  --green-800:#0f5132;
+  --green-700:#146c43;
+  --green-600:#198754;
+  --green-500:#20a55f;
+  --green-100:#e8f5ec;
+  --green-50:#f0faf3;
+  --bg:#f4f8f4;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+  --card:#ffffff;
+  --shadow:0 1px 2px rgba(0,0,0,.04), 0 4px 12px rgba(0,0,0,.05);
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;}
+.app{max-width:1100px;margin:24px auto;padding:0 16px;display:flex;flex-direction:column;gap:18px;}
+
+/* Hero */
+.hero{
+  position:relative;overflow:hidden;border-radius:var(--radius);
+  background:linear-gradient(135deg,#0e5a3a 0%,#0b4630 60%,#0a3d2a 100%);
+  color:#fff;padding:26px 28px;
+  box-shadow:var(--shadow);
+}
+.hero h1{margin:0 0 8px;font-size:26px;font-weight:800;letter-spacing:.2px;display:flex;align-items:center;gap:10px;}
+.hero p{margin:0 0 14px;opacity:.92;font-size:14.5px}
+.hero .badges{display:flex;flex-wrap:wrap;gap:10px}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;
+  border:1px solid rgba(255,255,255,.35);color:#fff;
+  padding:6px 12px;border-radius:999px;font-size:12.5px;background:rgba(255,255,255,.04);
+}
+.hero .watermark{
+  position:absolute;right:-20px;top:-10px;width:200px;height:200px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, rgba(255,255,255,.06), rgba(255,255,255,0));
+  pointer-events:none;
+}
+.hero .watermark span{
+  position:absolute;right:30px;top:40px;font-weight:800;font-size:90px;color:rgba(255,255,255,.06);letter-spacing:-6px;
+}
+
+/* Stepper */
+.stepper{
+  background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+  display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden;
+}
+.step{padding:18px 8px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;border-right:1px solid var(--border);}
+.step:last-child{border-right:0}
+.step .num{
+  width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:#d8d8d8;color:#fff;font-weight:700;font-size:14px;
+}
+.step.active .num,.step.done .num{background:var(--green-700)}
+.step .lbl{font-size:13.5px;color:#9ca3af;font-weight:600}
+.step.active .lbl,.step.done .lbl{color:var(--green-800)}
+.step.active .lbl{font-weight:700}
+
+/* Card */
+.card{
+  background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:22px 24px;
+}
+.card h2{margin:0 0 4px;font-size:18px;display:flex;align-items:center;gap:10px}
+.card .sub{color:#7b8a99;font-size:13.5px;margin-bottom:18px}
+
+/* Form (Step 1) */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;color:#374151;font-weight:600}
+.field input,.field select{
+  border:1px solid var(--border);border-radius:10px;padding:10px 12px;font-size:14px;background:#fff;outline:none;
+  transition:border-color .15s, box-shadow .15s;
+}
+.field input:focus,.field select:focus{border-color:var(--green-600);box-shadow:0 0 0 3px rgba(25,135,84,.15)}
+
+/* Category cards */
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cat{
+  position:relative;border:1.5px solid var(--border);border-radius:12px;padding:16px 14px;cursor:pointer;
+  background:#fff;transition:all .15s;
+}
+.cat:hover{border-color:var(--green-500)}
+.cat.selected{border-color:var(--green-600);background:#e9f6ee;box-shadow:0 0 0 3px rgba(25,135,84,.08)}
+.cat .ic{font-size:26px;margin-bottom:6px}
+.cat .t{font-weight:700;font-size:14.5px;margin:0 0 2px}
+.cat .d{font-size:12.5px;color:#6b7280;margin:0}
+.cat .check{position:absolute;top:10px;right:12px;color:var(--green-700);font-weight:700;display:none}
+.cat.selected .check{display:block}
+
+/* Sub-category chips */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{
+  border:1.5px solid var(--border);background:#fff;color:#374151;
+  padding:8px 14px;border-radius:999px;font-size:13.5px;cursor:pointer;font-weight:500;
+  transition:all .15s;
+}
+.chip:hover{border-color:var(--green-500)}
+.chip.active{background:#eaf6ef;border-color:var(--green-600);color:var(--green-800);font-weight:600}
+
+/* Buttons */
+.actions{display:flex;justify-content:space-between;margin-top:18px;gap:10px;flex-wrap:wrap}
+.btn{
+  border:1.5px solid var(--green-700);background:#fff;color:var(--green-800);
+  padding:10px 18px;border-radius:10px;font-weight:600;font-size:14px;cursor:pointer;
+  display:inline-flex;align-items:center;gap:8px;transition:all .15s;
+}
+.btn:hover{background:#f0faf3}
+.btn.primary{background:var(--green-700);color:#fff;border-color:var(--green-700)}
+.btn.primary:hover{background:var(--green-800)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+
+/* Results */
+.res-head{
+  display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;
+  border:1px solid var(--border);border-radius:12px;padding:10px 14px;background:#fff;
+}
+.profile-pills{display:flex;flex-wrap:wrap;gap:14px;color:#374151;font-size:13px;align-items:center}
+.profile-pills .p{display:inline-flex;align-items:center;gap:6px;color:#4b5563}
+.summary{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:14px}
+.summary .h{font-weight:700;font-size:15px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.scheme{
+  border:1px solid var(--border);border-radius:12px;padding:14px 16px;background:#fff;margin-top:12px;
+}
+.scheme .top{display:flex;gap:12px;align-items:flex-start;justify-content:space-between}
+.scheme .ttl{display:flex;gap:10px;align-items:flex-start}
+.scheme .ttl .icb{
+  width:36px;height:36px;border-radius:8px;background:#eaf6ef;display:flex;align-items:center;justify-content:center;color:var(--green-800);font-weight:800;flex:0 0 36px;
+}
+.scheme h3{margin:0;font-size:15.5px;color:var(--green-800)}
+.scheme .min{font-size:12.5px;color:#6b7280;margin-top:2px}
+.scheme .pct{color:var(--green-700);font-weight:700;font-size:13px;white-space:nowrap}
+.bar{height:6px;background:#eef2ee;border-radius:6px;margin:10px 0 8px;overflow:hidden}
+.bar > div{height:100%;background:linear-gradient(90deg,var(--green-600),var(--green-800));border-radius:6px}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#475569;background:#f1f5f9;border-radius:999px;padding:3px 10px;margin-right:6px}
+.kv{font-size:13.5px;color:#374151;margin:6px 0;line-height:1.5}
+.kv b{color:#0f172a}
+.scheme .apply{margin-top:10px}
+.foot-note{
+  margin-top:14px;border:1px dashed #d6c98c;background:#fff8df;color:#6b5b1c;border-radius:10px;padding:10px 14px;font-size:12.5px;
+}
+.icon{width:14px;height:14px;display:inline-block;vertical-align:-2px}
+@media (max-width:780px){
+  .grid2,.cat-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div id="app" class="app">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="watermark"><span>F</span></div>
+    <h1>🌱 Farmer Scheme Eligibility Agent</h1>
+    <p>AI-powered matching to government schemes — powered by Amazon Bedrock + Claude Sonnet 4.6</p>
+    <div class="badges">
+      <span class="badge">📍 Pan-India</span>
+      <span class="badge">📊 200+ Schemes</span>
+      <span class="badge">⚙️ AI Ranked Results</span>
+      <span class="badge">🔤 Multilingual Ready</span>
+    </div>
+  </div>
+
+  <!-- STEPPER -->
+  <div class="stepper">
+    <div class="step" :class="{active:step===1, done:step>1}">
+      <div class="num">1</div><div class="lbl">Profile</div>
+    </div>
+    <div class="step" :class="{active:step===2, done:step>2}">
+      <div class="num">2</div><div class="lbl">Category</div>
+    </div>
+    <div class="step" :class="{active:step===3, done:step>3}">
+      <div class="num">3</div><div class="lbl">Sub-category</div>
+    </div>
+    <div class="step" :class="{active:step===4, done:step>4}">
+      <div class="num">4</div><div class="lbl">Results</div>
+    </div>
+  </div>
+
+  <!-- STEP 1: PROFILE -->
+  <div v-if="step===1" class="card">
+    <h2>👤 Tell us about yourself</h2>
+    <div class="sub">We'll use this to match you with the right schemes</div>
+    <div class="grid2">
+      <div class="field"><label>Full name</label><input v-model="profile.name" placeholder="Your name" /></div>
+      <div class="field"><label>Age</label><input v-model.number="profile.age" type="number" min="15" max="100" placeholder="e.g. 30"/></div>
+      <div class="field"><label>Gender</label>
+        <select v-model="profile.gender">
+          <option value="">Select…</option><option>Male</option><option>Female</option><option>Other</option>
+        </select>
+      </div>
+      <div class="field"><label>State</label>
+        <select v-model="profile.state">
+          <option value="">Select…</option>
+          <option v-for="s in states" :key="s">{{s}}</option>
+        </select>
+      </div>
+      <div class="field"><label>Land size (acres)</label><input v-model.number="profile.land" type="number" min="0" step="0.1" placeholder="e.g. 4"/></div>
+      <div class="field"><label>Social category</label>
+        <select v-model="profile.social">
+          <option value="">Select…</option>
+          <option>General</option><option>OBC</option><option>SC</option><option>ST</option>
+        </select>
+      </div>
+    </div>
+    <div class="actions">
+      <span></span>
+      <button class="btn primary" :disabled="!canNext1" @click="step=2">Continue →</button>
+    </div>
+  </div>
+
+  <!-- STEP 2: CATEGORY -->
+  <div v-if="step===2" class="card">
+    <h2>▦ Choose a Scheme Category</h2>
+    <div class="sub">Select the area you need support in</div>
+    <div class="cat-grid">
+      <div class="cat" v-for="c in categories" :key="c.id"
+           :class="{selected:selectedCat===c.id}" @click="selectedCat=c.id">
+        <div class="ic">{{catIcons[c.id] || '📦'}}</div>
+        <p class="t">{{c.name}}</p>
+        <p class="d">{{catSubtitles[c.id] || c.description}}</p>
+        <div class="check">✓</div>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn" @click="step=1">← Back</button>
+      <button class="btn primary" :disabled="!selectedCat" @click="step=3; selectedSubs=[]">Continue →</button>
+    </div>
+  </div>
+
+  <!-- STEP 3: SUB-CATEGORY -->
+  <div v-if="step===3" class="card">
+    <h2>▤ Choose Sub-categories</h2>
+    <div class="sub">Select one or more areas (you can pick multiple)</div>
+    <div class="chips">
+      <div v-for="s in subList" :key="s.id" class="chip"
+           :class="{active:selectedSubs.includes(s.id)}" @click="toggleSub(s.id)">{{s.name}}</div>
+    </div>
+    <div class="actions">
+      <button class="btn" @click="step=2">← Back</button>
+      <button class="btn primary" :disabled="!selectedSubs.length" @click="runMatch">Find My Schemes 🔍</button>
+    </div>
+  </div>
+
+  <!-- STEP 4: RESULTS -->
+  <div v-if="step===4" class="card">
+    <div class="res-head">
+      <div class="profile-pills">
+        <span class="p">👤 {{profile.name||'You'}}</span>
+        <span class="p">🎂 {{profile.age}} yrs</span>
+        <span class="p">⚧ {{profile.gender}}</span>
+        <span class="p">📍 {{profile.state}}</span>
+        <span class="p">🌾 {{profile.land}} acres</span>
+        <span class="p">🏷 {{profile.social}}</span>
+      </div>
+    </div>
+
+    <div class="summary">
+      <div class="h">{{matched.length}} schemes matched – {{currentCatName}}</div>
+      <button class="btn" @click="step=2">↺ Change Category</button>
+    </div>
+
+    <div class="filters">
+      <div class="chip" :class="{active:filter==='all'}" @click="filter='all'">All</div>
+      <div class="chip" :class="{active:filter==='central'}" @click="filter='central'">Central Govt</div>
+      <div class="chip" :class="{active:filter==='state'}" @click="filter='state'">State Govt</div>
+      <div class="chip" :class="{active:filter==='women'}" @click="filter='women'">Women Specific</div>
+    </div>
+
+    <div v-if="!filtered.length" class="kv" style="margin-top:14px;color:#6b7280">No schemes match the current filter.</div>
+
+    <div v-for="m in filtered" :key="m.scheme.id" class="scheme">
+      <div class="top">
+        <div class="ttl">
+          <div class="icb">📄</div>
+          <div>
+            <h3>{{m.scheme.name}}</h3>
+            <div class="min">{{m.scheme.ministry}}</div>
+          </div>
+        </div>
+        <div class="pct">{{m.score}}% match</div>
+      </div>
+      <div class="bar"><div :style="{width:m.score+'%'}"></div></div>
+      <div><span class="tag">🏛 {{m.scheme.type==='state' ? (m.scheme.state||'State') + ' Govt' : 'Central Govt'}}</span></div>
+      <div class="kv"><b>Benefit:</b> {{m.scheme.benefit}}</div>
+      <div class="kv"><b>Why you qualify:</b> {{m.reason}}</div>
+      <div class="kv"><b>Documents needed:</b> {{(m.scheme.documents_required||[]).slice(0,4).join(', ')}}</div>
+      <div class="apply">
+        <a class="btn" :href="m.scheme.apply_link" target="_blank" rel="noopener">📝 How to Apply</a>
+      </div>
+    </div>
+
+    <div class="foot-note">
+      ✨ Results ranked by AI eligibility confidence. Tap "How to Apply" for official government portals.
+      <b>Future:</b> Hindi/Tamil voice input, offline mode &amp; document checklist generation.
+    </div>
+
+    <div class="actions">
+      <button class="btn" @click="step=3">← Back</button>
+      <button class="btn primary" @click="restart">Start Over</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://unpkg.com/vue@3.4.35/dist/vue.global.prod.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>

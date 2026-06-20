@@ -1,0 +1,1165 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-05",
+  "total_schemes": 60,
+  "categories": [
+    {
+      "id": "financial_support",
+      "name": "Financial Support",
+      "description": "Schemes related to money, subsidies, insurance, and financial assistance",
+      "sub_categories": [
+        {
+          "id": "credit_loans",
+          "name": "Credit & Loans",
+          "schemes": [
+            {
+              "id": "kcc",
+              "name": "Kisan Credit Card (KCC)",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare / NABARD",
+              "description": "Provides short-term credit to farmers for crop cultivation, post-harvest expenses, produce marketing, and allied activities at subsidised interest rates.",
+              "eligibility": {
+                "age_min": 18,
+                "age_max": 75,
+                "land_size_min_acres": 0.1,
+                "land_size_max_acres": 100,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all",
+                "additional_criteria": "Must have cultivable land or be a tenant farmer or sharecropper"
+              },
+              "benefit": "Revolving credit up to Rs 3 lakh at 4% interest (7% minus 3% govt subvention); livestock farmers up to Rs 2 lakh",
+              "documents_required": ["Aadhaar card", "Land ownership records (Khatauni)", "Bank account passbook", "Passport-size photograph", "Affidavit of no dues"],
+              "how_to_apply": "Visit nearest bank branch (SBI, PNB, cooperative bank) or apply online via bank's website",
+              "apply_link": "https://www.nabard.org/content1.aspx?id=572&catid=23&mid=530",
+              "helpline": "1800-180-1551"
+            },
+            {
+              "id": "pkvy_loan",
+              "name": "Agricultural Term Loan (ATL) – NABARD",
+              "type": "central",
+              "ministry": "NABARD",
+              "description": "Long-term loans for land development, irrigation, farm mechanisation, plantation crops, and allied activities.",
+              "eligibility": {
+                "age_min": 18,
+                "age_max": 70,
+                "land_size_min_acres": 0.5,
+                "land_size_max_acres": 50,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all",
+                "additional_criteria": "Must have a viable project plan"
+              },
+              "benefit": "Loans from Rs 50,000 up to Rs 25 lakh; repayment tenure 3–15 years depending on activity",
+              "documents_required": ["Aadhaar card", "Land records", "Project report", "Bank statements (6 months)", "Passport photo"],
+              "how_to_apply": "Apply through Regional Rural Banks (RRBs), cooperative banks, or NABARD-linked institutions",
+              "apply_link": "https://www.nabard.org",
+              "helpline": "022-26539895"
+            },
+            {
+              "id": "mudra_kishor",
+              "name": "PM Mudra Yojana – Kishor & Tarun (Agri)",
+              "type": "central",
+              "ministry": "Ministry of Finance / MUDRA",
+              "description": "Collateral-free loans for agri-allied activities like poultry, dairy, fishery, food processing micro-enterprises.",
+              "eligibility": {
+                "age_min": 18,
+                "age_max": 65,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal"],
+                "states": "all",
+                "additional_criteria": "Non-farm agri-allied or food processing micro enterprise"
+              },
+              "benefit": "Kishor: Rs 50,001–Rs 5 lakh; Tarun: Rs 5 lakh–Rs 10 lakh; no collateral required",
+              "documents_required": ["Aadhaar card", "PAN card or Form 60", "Bank account details", "Business plan or quotation", "Caste certificate if applicable"],
+              "how_to_apply": "Apply at any scheduled bank, MFI, NBFC or online at mudra.org.in",
+              "apply_link": "https://www.mudra.org.in",
+              "helpline": "1800-180-1111"
+            }
+          ]
+        },
+        {
+          "id": "subsidy_schemes",
+          "name": "Subsidy Schemes",
+          "schemes": [
+            {
+              "id": "nfsm_subsidy",
+              "name": "National Food Security Mission (NFSM) – Input Subsidy",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Provides subsidised certified seeds, micronutrients, soil amendments, and plant protection chemicals to boost rice, wheat, pulses, and coarse cereals production.",
+              "eligibility": {
+                "age_min": 18,
+                "land_size_min_acres": 0.1,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": ["Andhra Pradesh", "Bihar", "Chhattisgarh", "Gujarat", "Haryana", "Jharkhand", "Karnataka", "Madhya Pradesh", "Maharashtra", "Odisha", "Punjab", "Rajasthan", "Tamil Nadu", "Telangana", "Uttar Pradesh", "West Bengal"],
+                "additional_criteria": "Farmer must be in NFSM-notified district"
+              },
+              "benefit": "Free certified seeds (HYV), 50% subsidy on micronutrients and soil conditioners, subsidised pesticides and farm demos",
+              "documents_required": ["Aadhaar card", "Land records", "Farmer registration at local agriculture office"],
+              "how_to_apply": "Register at the Block Agriculture Officer or Krishi Vigyan Kendra in your district",
+              "apply_link": "https://nfsm.gov.in",
+              "helpline": "011-23382629"
+            },
+            {
+              "id": "smam",
+              "name": "Sub-Mission on Agricultural Mechanization (SMAM)",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Provides financial assistance for purchase of agricultural machinery and equipment at subsidised rates.",
+              "eligibility": {
+                "age_min": 18,
+                "land_size_min_acres": 0.5,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all",
+                "additional_criteria": "SC/ST, small & marginal, women farmers get priority; FPO members also eligible"
+              },
+              "benefit": "40–50% subsidy for general farmers; up to 80% subsidy for SC/ST and women farmers on tractors, tillers, harvesters, and irrigation equipment",
+              "documents_required": ["Aadhaar card", "Land records", "Quotation from authorized dealer", "Bank account passbook", "Caste certificate if applicable"],
+              "how_to_apply": "Apply through state agriculture department portal or at district agriculture office",
+              "apply_link": "https://agrimachinery.nic.in",
+              "helpline": "1800-180-1551"
+            }
+          ]
+        },
+        {
+          "id": "income_support",
+          "name": "Income Support Schemes",
+          "schemes": [
+            {
+              "id": "pmkisan",
+              "name": "PM-KISAN Samman Nidhi",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Direct income support of Rs 6,000 per year to small and marginal farmer families having cultivable land, payable in three equal installments of Rs 2,000 every four months.",
+              "eligibility": {
+                "age_min": 18,
+                "land_size_max_acres": 5,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal"],
+                "states": "all",
+                "exclusions": "Income tax payers, constitutional post holders, central/state govt employees (except MTS/Class IV), institutional landholders",
+                "additional_criteria": "Land must be in farmer's or family's name as per land records"
+              },
+              "benefit": "Rs 6,000 per year in 3 installments of Rs 2,000 each directly to bank account via DBT",
+              "documents_required": ["Aadhaar card (mandatory for DBT)", "Land ownership documents (Khatauni/Patta)", "Bank account linked to Aadhaar", "Mobile number"],
+              "how_to_apply": "Register at pmkisan.gov.in or through Common Service Centre (CSC) or state agriculture department",
+              "apply_link": "https://pmkisan.gov.in",
+              "helpline": "155261 / 011-24300606"
+            },
+            {
+              "id": "rythu_bandhu",
+              "name": "Rythu Bandhu – Investment Support Scheme",
+              "type": "state",
+              "state": "Telangana",
+              "ministry": "Government of Telangana – Agriculture Department",
+              "description": "Telangana state scheme providing pre-season agriculture investment support to all farmers before each crop season.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": ["Telangana"],
+                "additional_criteria": "Must be a land-owning farmer in Telangana; pattadar passbook required"
+              },
+              "benefit": "Rs 10,000 per acre per year (Rs 5,000 per season) for Kharif and Rabi seasons",
+              "documents_required": ["Aadhaar card", "Pattadar passbook (land record)", "Bank account passbook"],
+              "how_to_apply": "Automatic disbursement to registered farmers; new registration at MeeSeva centres or agriculture office",
+              "apply_link": "https://rythubandhu.telangana.gov.in",
+              "helpline": "1800-425-2977"
+            }
+          ]
+        },
+        {
+          "id": "crop_insurance",
+          "name": "Crop Insurance",
+          "schemes": [
+            {
+              "id": "pmfby",
+              "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Comprehensive crop insurance covering pre-sowing, standing crop, and post-harvest losses due to non-preventable natural risks.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all",
+                "additional_criteria": "Must grow notified crops in notified areas; KCC holders enrolled automatically; voluntary for non-loanee farmers"
+              },
+              "benefit": "Full sum insured for crop loss; farmer premium: 2% for Kharif, 1.5% for Rabi, 5% for commercial/horticulture crops; rest paid by govt",
+              "documents_required": ["Aadhaar card", "Land records / patta", "Bank account", "Sowing certificate from patwari/revenue officer", "Crop name and area sown"],
+              "how_to_apply": "Apply at nearest bank (if KCC holder, auto-enrolled) or at Common Service Centre or online at pmfby.gov.in",
+              "apply_link": "https://pmfby.gov.in",
+              "helpline": "1800-180-1551"
+            },
+            {
+              "id": "rwbcis",
+              "name": "Restructured Weather Based Crop Insurance Scheme (RWBCIS)",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Insurance against adverse weather events (rainfall deficit, excess rain, frost, heat, humidity) that cause crop losses, using automatic weather station data.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all",
+                "additional_criteria": "Available for notified horticultural and food crops in notified districts"
+              },
+              "benefit": "Automatic payout triggered by weather parameters without crop loss assessment; same premium structure as PMFBY",
+              "documents_required": ["Aadhaar card", "Land records", "Bank account", "Crop sowing details"],
+              "how_to_apply": "Enroll at bank branch or CSC; KCC holders automatically enrolled for notified crops",
+              "apply_link": "https://pmfby.gov.in",
+              "helpline": "1800-180-1551"
+            }
+          ]
+        },
+        {
+          "id": "livestock_insurance",
+          "name": "Livestock Insurance",
+          "schemes": [
+            {
+              "id": "livestock_insurance_scheme",
+              "name": "Livestock Insurance Scheme",
+              "type": "central",
+              "ministry": "Ministry of Fisheries, Animal Husbandry & Dairying",
+              "description": "Insurance cover to milch animals (cattle and buffalo) against death due to accident or disease, protecting farmers from financial loss.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal"],
+                "states": "all",
+                "additional_criteria": "BPL and SC/ST farmers get subsidised premium; animals must be healthy and identified with permanent ear tags"
+              },
+              "benefit": "Insurance cover equal to market value of animal; 50% premium subsidy for BPL/SC/ST farmers; maximum 5 animals per beneficiary",
+              "documents_required": ["Aadhaar card", "Animal purchase receipt or valuation certificate", "Veterinary health certificate", "Bank account"],
+              "how_to_apply": "Apply at the district Animal Husbandry Department office or nearest livestock insurance agency",
+              "apply_link": "https://dahd.nic.in",
+              "helpline": "1962"
+            }
+          ]
+        },
+        {
+          "id": "equipment_subsidy",
+          "name": "Agricultural Equipment Subsidy",
+          "schemes": [
+            {
+              "id": "agri_infra_fund",
+              "name": "Agriculture Infrastructure Fund (AIF)",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Medium to long-term debt financing for post-harvest management infrastructure and community farming assets through interest subvention and credit guarantee.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all",
+                "eligible_entities": ["Individual farmers", "FPOs", "PACS", "Startups", "Agri-entrepreneurs", "SHGs"],
+                "additional_criteria": "Project must be for post-harvest infrastructure: cold storage, warehousing, sorting, grading, primary processing"
+              },
+              "benefit": "Loans up to Rs 2 crore with 3% interest subvention; credit guarantee from NCGTC for loans up to Rs 2 crore",
+              "documents_required": ["Aadhaar/PAN", "Land documents", "Detailed project report", "Bank statements (6 months)", "Quotations from suppliers"],
+              "how_to_apply": "Apply online at agriinfra.dac.gov.in or through participating banks and cooperative institutions",
+              "apply_link": "https://agriinfra.dac.gov.in",
+              "helpline": "011-23382629"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "farming_infrastructure",
+      "name": "Farming Infrastructure",
+      "description": "Schemes that help improve farming facilities and productivity",
+      "sub_categories": [
+        {
+          "id": "irrigation",
+          "name": "Irrigation",
+          "schemes": [
+            {
+              "id": "pmksy",
+              "name": "Pradhan Mantri Krishi Sinchayee Yojana (PMKSY)",
+              "type": "central",
+              "ministry": "Ministry of Jal Shakti / Ministry of Agriculture",
+              "description": "Comprehensive irrigation scheme with the goal of 'Har Khet Ko Pani' (water to every field) and 'More Crop Per Drop' through efficient water use technologies.",
+              "eligibility": {
+                "age_min": 18,
+                "land_size_min_acres": 0.25,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all",
+                "additional_criteria": "Priority to districts with groundwater depletion; SC/ST and women farmers get additional 10% subsidy"
+              },
+              "benefit": "55% subsidy on drip/sprinkler irrigation for small & marginal farmers; 45% for other farmers; 100% for SC/ST in some states",
+              "documents_required": ["Aadhaar card", "Land records", "Bank account", "Photograph", "Application to district agriculture office"],
+              "how_to_apply": "Apply at district agriculture office or state horticulture department; check state portal for per-drip component subsidy",
+              "apply_link": "https://pmksy.gov.in",
+              "helpline": "1800-180-1551"
+            }
+          ]
+        },
+        {
+          "id": "solar_energy",
+          "name": "Solar & Energy",
+          "schemes": [
+            {
+              "id": "pm_kusum",
+              "name": "PM-KUSUM (Kisan Urja Suraksha evam Utthaan Mahabhiyan)",
+              "type": "central",
+              "ministry": "Ministry of New and Renewable Energy",
+              "description": "Provides solar pumps and grid-connected solar power plants to farmers for reliable and affordable irrigation and additional income from solar energy.",
+              "eligibility": {
+                "age_min": 18,
+                "land_size_min_acres": 0.5,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all",
+                "additional_criteria": "Component B: existing diesel/electric pump owners; Component A: barren/fallow land 0.5 acre minimum"
+              },
+              "benefit": "Component A: 30% central + 30% state subsidy on solar power plant (2 MW); Component B: 60% subsidy on solar pump (up to 7.5 HP); Component C: subsidy to solarise existing grid pumps",
+              "documents_required": ["Aadhaar card", "Land records", "Existing pump certificate (if applicable)", "Bank account", "Income certificate"],
+              "how_to_apply": "Apply at state DISCOM office or state renewable energy agency; or at state agriculture department portal",
+              "apply_link": "https://mnre.gov.in/solar/schemes",
+              "helpline": "1800-180-3333"
+            }
+          ]
+        },
+        {
+          "id": "storage_cold_chain",
+          "name": "Storage & Cold Chain",
+          "schemes": [
+            {
+              "id": "amrut",
+              "name": "AMRUT – Agri Cold Chain Infrastructure",
+              "type": "central",
+              "ministry": "Ministry of Food Processing Industries",
+              "description": "Financial assistance for setting up integrated cold chain and value addition infrastructure from farm gate to consumer.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "eligible_entities": ["Individual entrepreneurs", "FPOs", "cooperatives", "SHGs", "companies"],
+                "states": "all"
+              },
+              "benefit": "Grant up to Rs 10 crore (50% of project cost for general; 75% for NE/hilly states); for cold storage, pre-cooling, ripening chambers",
+              "documents_required": ["Aadhaar/PAN", "Project report", "Land documents", "Bank statements", "Company registration if applicable"],
+              "how_to_apply": "Apply online at mofpi.gov.in or through state agriculture/food processing department",
+              "apply_link": "https://mofpi.gov.in",
+              "helpline": "1800-111-175"
+            }
+          ]
+        },
+        {
+          "id": "water_conservation",
+          "name": "Water Conservation",
+          "schemes": [
+            {
+              "id": "nwm",
+              "name": "National Watershed Management (PMKSY-WDC)",
+              "type": "central",
+              "ministry": "Ministry of Rural Development / Ministry of Agriculture",
+              "description": "Integrated watershed development for sustainable livelihoods including soil and moisture conservation, land development, and ground water recharge.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal"],
+                "states": "all",
+                "additional_criteria": "Applicable in notified watershed areas; community-based approach; NREGA convergence for works"
+              },
+              "benefit": "Construction of check dams, farm ponds, contour bunding, trenches; free for BPL and SC/ST farmers; livelihood support of Rs 3,000–6,000 per household",
+              "documents_required": ["Aadhaar card", "Land records", "BPL card if applicable", "Community participation proof"],
+              "how_to_apply": "Apply through Gram Panchayat or block-level Watershed Development Team (WDT)",
+              "apply_link": "https://dolr.gov.in",
+              "helpline": "011-23384811"
+            }
+          ]
+        },
+        {
+          "id": "farm_mechanization",
+          "name": "Farm Mechanization",
+          "schemes": [
+            {
+              "id": "chc",
+              "name": "Custom Hiring Centre (CHC) under SMAM",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Establishes Custom Hiring Centres with a fleet of farm machinery so small farmers can hire equipment affordably without owning it.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "eligible_entities": ["Individual farmers", "FPOs", "PACS", "SHGs", "entrepreneurs"],
+                "states": "all",
+                "additional_criteria": "Priority to co-operative societies and FPOs; viable business plan required for CHC setup"
+              },
+              "benefit": "40% subsidy for setting up CHC (equipment pool of Rs 25 lakh); 80% subsidy for SC/ST; banks provide 60% as loan; farm machinery hiring at subsidised rates for members",
+              "documents_required": ["Aadhaar card", "Land records or business registration", "Project report", "Bank passbook", "Caste certificate if applicable"],
+              "how_to_apply": "Apply at state agriculture department or through agrimachinery.nic.in portal",
+              "apply_link": "https://agrimachinery.nic.in",
+              "helpline": "1800-180-1551"
+            }
+          ]
+        },
+        {
+          "id": "soil_health",
+          "name": "Soil Health & Testing",
+          "schemes": [
+            {
+              "id": "soil_health_card",
+              "name": "Soil Health Card Scheme",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Provides soil health cards to farmers with information on soil nutrient status and recommendations on appropriate dosage of nutrients for improved productivity.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all"
+              },
+              "benefit": "Free soil testing every 2 years; personalised nutrient recommendation card; reduces fertilizer cost by 8–10% with better yield",
+              "documents_required": ["Aadhaar card", "Land details (survey number/khasra)", "Mobile number for SMS alerts"],
+              "how_to_apply": "Contact Block Agriculture Officer or Krishi Vigyan Kendra; or register at soilhealth.dac.gov.in",
+              "apply_link": "https://soilhealth.dac.gov.in",
+              "helpline": "1800-180-1551"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agriculture_crop_development",
+      "name": "Agriculture & Crop Development",
+      "description": "Schemes focused on cultivation, crop improvement, and sustainable farming",
+      "sub_categories": [
+        {
+          "id": "organic_farming",
+          "name": "Organic Farming",
+          "schemes": [
+            {
+              "id": "pkvy",
+              "name": "Paramparagat Krishi Vikas Yojana (PKVY)",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Promotes organic farming in cluster mode; provides financial support for certification, capacity building, and marketing of organic produce.",
+              "eligibility": {
+                "age_min": 18,
+                "land_size_min_acres": 0.25,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all",
+                "additional_criteria": "Farmers must form clusters of minimum 50 acres (20 farmers); three-year transition period to full organic"
+              },
+              "benefit": "Rs 50,000/ha over 3 years (Rs 31,000 for farm inputs + Rs 8,800 for PGS certification + Rs 10,200 for value addition & marketing)",
+              "documents_required": ["Aadhaar card", "Land records", "Group/cluster formation list", "Bank account", "No-chemical declaration"],
+              "how_to_apply": "Form a cluster with neighbours; apply through state agriculture department or Paramparagat Krishi Vikas Yojana district nodal officer",
+              "apply_link": "https://pgsindia-ncof.gov.in",
+              "helpline": "011-23382629"
+            }
+          ]
+        },
+        {
+          "id": "natural_farming",
+          "name": "Natural Farming",
+          "schemes": [
+            {
+              "id": "bpkp",
+              "name": "Bharatiya Prakritik Krishi Paddhati (BPKP)",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Promotes traditional Indian natural farming practices (zero budget natural farming) using Jivamrit, Bijamrit, and mulching; no external inputs.",
+              "eligibility": {
+                "age_min": 18,
+                "land_size_min_acres": 0.1,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal"],
+                "states": "all"
+              },
+              "benefit": "Rs 12,200/ha for cluster demonstrations; free training, exposure visits, capacity building; cost savings from zero external inputs",
+              "documents_required": ["Aadhaar card", "Land records", "Bank account"],
+              "how_to_apply": "Contact Krishi Vigyan Kendra (KVK) or state agriculture department for registration",
+              "apply_link": "https://agricoop.gov.in",
+              "helpline": "1800-180-1551"
+            }
+          ]
+        },
+        {
+          "id": "seed_fertilizer",
+          "name": "Seed & Fertilizer Support",
+          "schemes": [
+            {
+              "id": "nfsm_seeds",
+              "name": "NFSM Seed Village Programme",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Provides quality certified seeds of HYV and hybrid varieties at subsidised rates to create a network of seed villages for local seed production.",
+              "eligibility": {
+                "age_min": 18,
+                "land_size_min_acres": 0.25,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": ["Andhra Pradesh", "Bihar", "Chhattisgarh", "Gujarat", "Haryana", "Jharkhand", "Karnataka", "Madhya Pradesh", "Maharashtra", "Odisha", "Punjab", "Rajasthan", "Tamil Nadu", "Telangana", "Uttar Pradesh", "West Bengal"]
+              },
+              "benefit": "Seeds at 50% subsidised cost for paddy, wheat, pulses; free demonstration plots; 10–15% yield increase expected",
+              "documents_required": ["Aadhaar card", "Land records", "Farmer ID at agriculture office"],
+              "how_to_apply": "Register at district agriculture office or block agriculture officer",
+              "apply_link": "https://nfsm.gov.in",
+              "helpline": "011-23382629"
+            },
+            {
+              "id": "urea_neem",
+              "name": "Neem Coated Urea Policy",
+              "type": "central",
+              "ministry": "Ministry of Chemicals & Fertilizers",
+              "description": "100% urea must be neem coated; reduces misuse, improves nitrogen use efficiency, and reduces cost of cultivation.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all"
+              },
+              "benefit": "Neem coated urea at same MRP as regular urea; 5–10% better yield; available at all fertilizer retail shops",
+              "documents_required": ["Aadhaar card", "Kisan credit card or farmer ID for subsidised purchase"],
+              "how_to_apply": "Available at all licensed fertilizer dealers; no separate application needed",
+              "apply_link": "https://fert.nic.in",
+              "helpline": "1800-425-3399"
+            }
+          ]
+        },
+        {
+          "id": "horticulture",
+          "name": "Horticulture",
+          "schemes": [
+            {
+              "id": "midh",
+              "name": "Mission for Integrated Development of Horticulture (MIDH)",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Holistic development of horticulture sector covering fruits, vegetables, root & tuber crops, mushrooms, spices, flowers, aromatic plants, coconut, cashew, and bamboo.",
+              "eligibility": {
+                "age_min": 18,
+                "land_size_min_acres": 0.25,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all",
+                "additional_criteria": "SC/ST, small & marginal, NE states get higher subsidy; protected cultivation subsidy for poly houses"
+              },
+              "benefit": "40–50% subsidy on establishment of orchards, poly houses, shade nets; 50% for bee colonies; 33–50% for pack houses and sorting units",
+              "documents_required": ["Aadhaar card", "Land records", "Bank account", "Photograph", "Application to state horticulture dept."],
+              "how_to_apply": "Apply at state horticulture department or National Horticulture Board district office",
+              "apply_link": "https://midh.gov.in",
+              "helpline": "1800-180-1551"
+            }
+          ]
+        },
+        {
+          "id": "crop_procurement_msp",
+          "name": "Crop Procurement / MSP",
+          "schemes": [
+            {
+              "id": "msp_procurement",
+              "name": "Minimum Support Price (MSP) Procurement – FCI / State Agencies",
+              "type": "central",
+              "ministry": "Ministry of Agriculture / Food Corporation of India",
+              "description": "Government procures 23 major crops at announced MSP to protect farmers from distress selling; wheat and paddy procured at scale through FCI and state agencies.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all",
+                "additional_criteria": "Farmer must be registered; produce must meet FAQ (Fair Average Quality) specifications; sale through mandis or direct procurement centres"
+              },
+              "benefit": "Assured price for 23 crops including paddy, wheat, pulses, oilseeds, cotton; payment directly to bank account within 3 days of delivery",
+              "documents_required": ["Aadhaar card", "Bank account", "Land records", "Farmer registration at mandi/APMC"],
+              "how_to_apply": "Register at nearest APMC / mandi or state procurement portal; take produce to designated procurement centre during notified dates",
+              "apply_link": "https://fci.gov.in",
+              "helpline": "1800-180-4880"
+            },
+            {
+              "id": "pm_aasha",
+              "name": "PM-AASHA (Annadata Aay SanraksHan Abhiyan)",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Umbrella scheme ensuring remunerative prices to oilseed, pulses, and copra farmers through MSP-based procurement and price support.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all",
+                "additional_criteria": "Only for notified crops: oilseeds, pulses, copra; price difference paid when market price falls below MSP"
+              },
+              "benefit": "Price Deficiency Payment (PDP) of difference between MSP and market price directly to bank account; no physical procurement burden on farmer",
+              "documents_required": ["Aadhaar card", "Bank account linked to Aadhaar", "Land records", "Registration on state agriculture portal"],
+              "how_to_apply": "Register on state agriculture or mandi portal; sell in APMC; deficiency payment auto-credited",
+              "apply_link": "https://agricoop.gov.in",
+              "helpline": "1800-180-1551"
+            }
+          ]
+        },
+        {
+          "id": "digital_agriculture",
+          "name": "Digital Agriculture / Smart Farming",
+          "schemes": [
+            {
+              "id": "digital_agriculture_mission",
+              "name": "Digital Agriculture Mission (DAM)",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Creates digital public infrastructure for agriculture including AgriStack (farmer registry, crop sown registry, geo-referenced maps) for targeted service delivery.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all"
+              },
+              "benefit": "Free digital Farmer ID (Kisan ID); access to personalised advisories, scheme eligibility alerts via SMS; precision farming support through satellite data",
+              "documents_required": ["Aadhaar card", "Mobile number", "Land records (for Kisan ID linking)"],
+              "how_to_apply": "Enrol for Kisan ID at Common Service Centre or state agriculture department; Kisan e-mitra chatbot assistance available",
+              "apply_link": "https://agricoop.gov.in",
+              "helpline": "1800-180-1551"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "allied_farming_activities",
+      "name": "Allied Farming Activities",
+      "description": "Schemes related to animal farming, fisheries, and related sectors",
+      "sub_categories": [
+        {
+          "id": "dairy_livestock",
+          "name": "Dairy & Livestock",
+          "schemes": [
+            {
+              "id": "nlm",
+              "name": "National Livestock Mission (NLM)",
+              "type": "central",
+              "ministry": "Ministry of Fisheries, Animal Husbandry & Dairying",
+              "description": "Sustainable development of livestock sector with focus on breed improvement, fodder development, and risk management for small farmers and rural entrepreneurs.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal"],
+                "states": "all",
+                "additional_criteria": "SC/ST and women get priority; individual or SHG/cooperative group"
+              },
+              "benefit": "50% subsidy for individual farmers; 33% for companies; subsidy on breed improvement, fodder machines, silage making, livestock shelter",
+              "documents_required": ["Aadhaar card", "Livestock ownership proof", "Bank account", "Caste certificate if applicable", "Project report for capital items"],
+              "how_to_apply": "Apply at district Animal Husbandry office or state Animal Husbandry Department",
+              "apply_link": "https://dahd.nic.in",
+              "helpline": "1962"
+            },
+            {
+              "id": "deds",
+              "name": "Dairy Entrepreneurship Development Scheme (DEDS)",
+              "type": "central",
+              "ministry": "Ministry of Fisheries, Animal Husbandry & Dairying / NABARD",
+              "description": "Capital investment subsidy scheme for setting up modern dairy farms and ancillary units for milk processing and preservation.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all",
+                "additional_criteria": "SC/ST get 33.33% subsidy; others get 25%; minimum 2 animals up to 10 for individual"
+              },
+              "benefit": "25% capital subsidy (33.33% for SC/ST) on project cost for 2–10 animal dairy unit, milk cooling, chilling equipment; max subsidy Rs 1.67 lakh to Rs 20 lakh",
+              "documents_required": ["Aadhaar card", "Land records/lease", "Project report", "Veterinary NOC", "Bank loan sanction letter"],
+              "how_to_apply": "Apply at NABARD district office or through scheduled commercial bank for loan + subsidy",
+              "apply_link": "https://www.nabard.org",
+              "helpline": "022-26539895"
+            }
+          ]
+        },
+        {
+          "id": "fisheries",
+          "name": "Fisheries",
+          "schemes": [
+            {
+              "id": "pmmsy",
+              "name": "Pradhan Mantri Matsya Sampada Yojana (PMMSY)",
+              "type": "central",
+              "ministry": "Ministry of Fisheries, Animal Husbandry & Dairying",
+              "description": "Holistic development of fisheries sector covering capture fisheries, aquaculture, post-harvest management, and cold chain development.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "eligible_entities": ["Fish farmers", "fishers", "SHGs", "FPOs", "cooperatives"],
+                "states": "all",
+                "additional_criteria": "SC/ST and women get higher subsidy (extra 10%); freshwater, brackishwater, marine all eligible"
+              },
+              "benefit": "40% subsidy for general (60% for SC/ST/Women) on fish ponds, cages, boat/net, cold chain, feed; Rs 20,050 crore total outlay till 2025",
+              "documents_required": ["Aadhaar card", "Land/water body lease", "Bank account", "Caste certificate if applicable", "Project report"],
+              "how_to_apply": "Apply at district fisheries office or state fisheries development board; online at pmmsy.dof.gov.in",
+              "apply_link": "https://pmmsy.dof.gov.in",
+              "helpline": "1800-425-1660"
+            }
+          ]
+        },
+        {
+          "id": "poultry",
+          "name": "Poultry",
+          "schemes": [
+            {
+              "id": "nbp",
+              "name": "National Backyard Poultry Development Programme",
+              "type": "central",
+              "ministry": "Ministry of Fisheries, Animal Husbandry & Dairying",
+              "description": "Provides improved breeds of backyard poultry (Vanaraja, Gramapriya) to rural households, particularly tribal and BPL families for nutritional and income security.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal"],
+                "states": "all",
+                "additional_criteria": "Priority to tribal, BPL, landless and women-headed households; 40 chicks per unit"
+              },
+              "benefit": "Free chicks (40 per household) of improved dual-purpose breeds; free feed for 4 weeks; free vaccination; training on backyard poultry management",
+              "documents_required": ["Aadhaar card", "BPL/tribal certificate if applicable", "Bank account"],
+              "how_to_apply": "Contact district Animal Husbandry office or veterinary hospital",
+              "apply_link": "https://dahd.nic.in",
+              "helpline": "1962"
+            }
+          ]
+        },
+        {
+          "id": "beekeeping",
+          "name": "Beekeeping",
+          "schemes": [
+            {
+              "id": "nbhm",
+              "name": "National Beekeeping & Honey Mission (NBHM)",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Comprehensive development of beekeeping for pollination services, honey production, income diversification, and 'Sweet Revolution'.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all",
+                "additional_criteria": "SC/ST, tribal, and women beekeepers get priority and higher subsidy; training completion required"
+              },
+              "benefit": "Subsidy on bee boxes (Rs 2,000 per box), bee colonies, honey extractors, bee veil, smoker; 40% subsidy general, 60% for SC/ST/women; free 5-day training",
+              "documents_required": ["Aadhaar card", "Land records", "Bank account", "Caste certificate if applicable", "Training completion certificate"],
+              "how_to_apply": "Apply through state agriculture department or National Bee Board state office",
+              "apply_link": "https://nbb.gov.in",
+              "helpline": "011-26862629"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training_market_support",
+      "name": "Training & Market Support",
+      "description": "Schemes that help farmers learn, upskill, and access better markets",
+      "sub_categories": [
+        {
+          "id": "farmer_training",
+          "name": "Farmer Training",
+          "schemes": [
+            {
+              "id": "atma",
+              "name": "ATMA – Agricultural Technology Management Agency",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Decentralised extension system at district level providing training, demonstrations, exposure visits, Kisan Melas, and field days to disseminate improved agricultural technology.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all"
+              },
+              "benefit": "Free training (1–7 day courses), field demonstrations, farm visits, Kisan Melas; exposure visits to agricultural institutions; Rs 1,000–2,000 per day stipend for residential training",
+              "documents_required": ["Aadhaar card", "Farmer ID or land record"],
+              "how_to_apply": "Contact Block Technology Team (BTT) at block agriculture office or Krishi Vigyan Kendra (KVK) in your district",
+              "apply_link": "https://atma-dac.gov.in",
+              "helpline": "1800-180-1551"
+            },
+            {
+              "id": "kvk",
+              "name": "Krishi Vigyan Kendra (KVK) – Skill Development",
+              "type": "central",
+              "ministry": "Indian Council of Agricultural Research (ICAR)",
+              "description": "Farm science centres at district level for vocational training, on-farm testing of technologies, and front-line demonstrations for farmers and rural youth.",
+              "eligibility": {
+                "age_min": 15,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all"
+              },
+              "benefit": "Free vocational training (1–3 months) in agri-allied trades; on-farm technology testing; free advisory; dial a KVK helpline; ICAR-certified training",
+              "documents_required": ["Aadhaar card", "Educational certificate (class 8 min. for vocational training)"],
+              "how_to_apply": "Contact nearest KVK (one per district across India) directly; kvk.icar.gov.in for district-wise list",
+              "apply_link": "https://kvk.icar.gov.in",
+              "helpline": "1800-425-1444"
+            }
+          ]
+        },
+        {
+          "id": "market_linkage",
+          "name": "Market Linkage",
+          "schemes": [
+            {
+              "id": "enam",
+              "name": "eNAM – National Agriculture Market",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare / SFAC",
+              "description": "Online trading platform linking 1,000+ mandis across India for transparent price discovery, reduced intermediaries, and better farmer realisation.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all",
+                "additional_criteria": "Produce must be sold at eNAM-integrated APMCs; farmer must have bank account"
+              },
+              "benefit": "Better price discovery through online bidding; payment within 24 hours to bank account; quality assaying at mandi; access to buyers across states",
+              "documents_required": ["Aadhaar card", "Bank account", "Land records / produce ownership proof", "APMC registration"],
+              "how_to_apply": "Register at enam.gov.in or at APMC mandi office in your district",
+              "apply_link": "https://enam.gov.in",
+              "helpline": "1800-270-0224"
+            }
+          ]
+        },
+        {
+          "id": "rural_entrepreneurship",
+          "name": "Rural Entrepreneurship",
+          "schemes": [
+            {
+              "id": "pmfme",
+              "name": "PM Formalisation of Micro Food Processing Enterprises (PMFME)",
+              "type": "central",
+              "ministry": "Ministry of Food Processing Industries",
+              "description": "Credit-linked capital subsidy and support for existing micro food processing enterprises to enhance their competitiveness and integration into the formal economy.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "eligible_entities": ["Individual micro food enterprises", "SHGs", "FPOs", "cooperatives"],
+                "states": "all",
+                "additional_criteria": "Existing food processing unit or new unit by farmer; ODOP (One District One Product) alignment preferred"
+              },
+              "benefit": "35% credit-linked subsidy (max Rs 10 lakh per unit) for upgradation; SHGs: Rs 40,000 working capital grant + Rs 4 lakh equipment subsidy; seed capital Rs 40,000 for new units",
+              "documents_required": ["Aadhaar/PAN", "FSSAI registration", "Project report", "Bank account", "Land/rental agreement", "ITR if available"],
+              "how_to_apply": "Apply online at pmfme.mofpi.gov.in or through state nodal agency",
+              "apply_link": "https://pmfme.mofpi.gov.in",
+              "helpline": "1800-111-175"
+            }
+          ]
+        },
+        {
+          "id": "fpo_support",
+          "name": "FPO (Farmer Producer Organisation) Support",
+          "schemes": [
+            {
+              "id": "fpo_scheme",
+              "name": "Formation & Promotion of 10,000 FPOs",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare / SFAC / NABARD / NCDC",
+              "description": "Financial support for formation, promotion, and handholding of 10,000 Farmer Producer Organisations (FPOs) to improve farmers' bargaining power and market access.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal"],
+                "states": "all",
+                "additional_criteria": "Minimum 300 members for plains; 100 for NE/hilly states; must register as FPC (Farmer Producer Company) under Companies Act"
+              },
+              "benefit": "Rs 18 lakh grant per FPO over 5 years for management cost; equity grant up to Rs 15 lakh; credit guarantee up to Rs 2 crore; training and handholding support",
+              "documents_required": ["Aadhaar cards of all members", "Land records", "FPC registration certificate", "Bank account", "Audited accounts"],
+              "how_to_apply": "Form FPO with minimum members; approach SFAC, NABARD, or NCDC as Cluster Based Business Organisation (CBBO)",
+              "apply_link": "https://sfacindia.com",
+              "helpline": "011-26862406"
+            }
+          ]
+        },
+        {
+          "id": "agri_startup",
+          "name": "Agri Startup Support",
+          "schemes": [
+            {
+              "id": "rkvy_raftaar",
+              "name": "RKVY-RAFTAAR – Agri Startup Programme",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Incubation and funding support for agri-startups and rural entrepreneurs to develop innovative solutions for the agriculture sector.",
+              "eligibility": {
+                "age_min": 18,
+                "age_max": 40,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "states": "all",
+                "additional_criteria": "Must have an agri-tech innovation idea; apply to any of 25 RKVY-RAFTAAR Agri Business Incubators (R-ABIs)"
+              },
+              "benefit": "Seed funding up to Rs 5 lakh (pre-seed) and Rs 25 lakh (seed stage); free incubation for 2 years; mentoring, training, market access, networking support",
+              "documents_required": ["Aadhaar card", "Business idea/pitch deck", "Educational certificates", "Bank account"],
+              "how_to_apply": "Apply to any of 25 RKVY-RAFTAAR Agri Business Incubators (R-ABIs) online; rkvy.nic.in/static/raftaar.html",
+              "apply_link": "https://rkvy.nic.in",
+              "helpline": "011-23385553"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "special_farmer_categories",
+      "name": "Special Farmer Categories",
+      "description": "Schemes targeted to specific farmer groups with enhanced support",
+      "sub_categories": [
+        {
+          "id": "women_farmer_schemes",
+          "name": "Women Farmer Schemes",
+          "schemes": [
+            {
+              "id": "mksp",
+              "name": "Mahila Kisan Sashaktikaran Pariyojana (MKSP)",
+              "type": "central",
+              "ministry": "Ministry of Rural Development – NRLM / DAY-NRLM",
+              "description": "Empowers women farmers by improving their participation and productivity in agriculture; promotes SHG-based interventions for inputs, credit, technology, and market access.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "female",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal"],
+                "states": "all",
+                "additional_criteria": "Must be member of a SHG (Self Help Group) linked to NRLM; preference for SC/ST/minority women"
+              },
+              "benefit": "SHG revolving fund Rs 10,000–15,000; Community Investment Fund up to Rs 2.5 lakh per SHG; training in organic farming, nutrition garden, seed bank; market linkage support",
+              "documents_required": ["Aadhaar card", "SHG membership certificate", "Bank account (SHG linked)", "Land records if available"],
+              "how_to_apply": "Join NRLM SHG through Gram Panchayat or Block NRLM office; register at aajeevika.gov.in",
+              "apply_link": "https://aajeevika.gov.in",
+              "helpline": "1800-180-5999"
+            },
+            {
+              "id": "women_smam",
+              "name": "SMAM – Enhanced Subsidy for Women Farmers",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Under Sub-Mission on Agricultural Mechanisation, women farmers receive higher subsidy (up to 80%) on farm equipment, tools, and machinery.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "female",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal", "large"],
+                "states": "all"
+              },
+              "benefit": "Up to 80% subsidy on tractors, power tillers, reapers, threshers, sprayers for women farmers; higher priority in selection",
+              "documents_required": ["Aadhaar card", "Land records in woman's name", "Bank account", "Photograph"],
+              "how_to_apply": "Apply at district agriculture office with land records showing women's ownership or co-ownership",
+              "apply_link": "https://agrimachinery.nic.in",
+              "helpline": "1800-180-1551"
+            }
+          ]
+        },
+        {
+          "id": "young_farmer_schemes",
+          "name": "Young Farmer Schemes",
+          "schemes": [
+            {
+              "id": "rkvy_young",
+              "name": "RKVY-RAFTAAR – Young Farmer Agri-Entrepreneur",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Special focus within RKVY-RAFTAAR to attract educated rural youth and young farmers into agriculture through skill training and startup funding.",
+              "eligibility": {
+                "age_min": 18,
+                "age_max": 40,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "states": "all",
+                "additional_criteria": "Educated youth (Class 10+) from agricultural families; agriculture or agri-allied innovation idea preferred"
+              },
+              "benefit": "Seed funding Rs 5–25 lakh; 2 years free incubation; Rs 1 lakh training stipend; mentoring from successful agri-entrepreneurs",
+              "documents_required": ["Aadhaar card", "Age proof", "Educational certificate (Class 10 min.)", "Innovation/business idea", "Bank account"],
+              "how_to_apply": "Apply online at rkvy.nic.in to nearest R-ABI incubator",
+              "apply_link": "https://rkvy.nic.in",
+              "helpline": "011-23385553"
+            },
+            {
+              "id": "pmkvy_agri",
+              "name": "PMKVY – Skill Development for Young Farmers",
+              "type": "central",
+              "ministry": "Ministry of Skill Development & Entrepreneurship",
+              "description": "Pradhan Mantri Kaushal Vikas Yojana provides short-term skill training in agriculture and allied sectors for rural youth with certification and placement support.",
+              "eligibility": {
+                "age_min": 15,
+                "age_max": 45,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "states": "all",
+                "additional_criteria": "School dropout, unemployed youth, and farmers' children; no minimum education for most agri courses"
+              },
+              "benefit": "Free short-term training (150–300 hrs) in organic farming, dairy, poultry, fisheries, food processing; Skill India certificate; placement linkage; Rs 500–1,500 post-training incentive",
+              "documents_required": ["Aadhaar card", "Bank account", "Educational certificates if available"],
+              "how_to_apply": "Find nearest PMKVY training centre at skillindia.gov.in or call skill helpline",
+              "apply_link": "https://skillindia.gov.in",
+              "helpline": "1800-123-9626"
+            }
+          ]
+        },
+        {
+          "id": "small_marginal_farmers",
+          "name": "Small & Marginal Farmer Schemes",
+          "schemes": [
+            {
+              "id": "sfac",
+              "name": "SFAC – Venture Capital Assistance for Small Farmers",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare / SFAC",
+              "description": "Provides venture capital assistance to small and marginal farmers as interest-free loan for agri-business projects through FPOs and cooperatives.",
+              "eligibility": {
+                "age_min": 18,
+                "land_size_max_acres": 5,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal"],
+                "states": "all",
+                "additional_criteria": "Project must be through an FPO/cooperative; individual farmers can apply through their FPO"
+              },
+              "benefit": "Interest-free venture capital Rs 25 lakh per project; for post-harvest, processing, cold chain; repayable over 5–7 years",
+              "documents_required": ["Aadhaar card", "Land records (max 5 acres)", "FPO membership certificate", "Project report"],
+              "how_to_apply": "Apply through FPO to SFAC regional office or at sfacindia.com",
+              "apply_link": "https://sfacindia.com",
+              "helpline": "011-26862406"
+            },
+            {
+              "id": "micro_irrigation_sf",
+              "name": "PMKSY-PDMC – Micro Irrigation for Small Farmers",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare / NABARD",
+              "description": "Special micro irrigation fund of Rs 5,000 crore at NABARD to extend benefits of drip and sprinkler irrigation to small and marginal farmers beyond normal PMKSY allocations.",
+              "eligibility": {
+                "age_min": 18,
+                "land_size_max_acres": 5,
+                "gender": "all",
+                "social_category": ["General", "OBC", "SC", "ST"],
+                "farmer_type": ["small", "marginal"],
+                "states": "all"
+              },
+              "benefit": "Soft loans to states at 3% interest to extend higher subsidy (70–80%) to small farmers on drip and sprinkler systems; bridging the subsidy gap over PMKSY norms",
+              "documents_required": ["Aadhaar card", "Land records (max 5 acres)", "Bank account"],
+              "how_to_apply": "Apply through state agriculture or horticulture department micro-irrigation portal",
+              "apply_link": "https://pmksy.gov.in",
+              "helpline": "1800-180-1551"
+            }
+          ]
+        },
+        {
+          "id": "sc_st_farmer_schemes",
+          "name": "SC/ST Farmer Schemes",
+          "schemes": [
+            {
+              "id": "scsp_tsp_agri",
+              "name": "SC Sub-Plan (SCSP) & Tribal Sub-Plan (TSP) – Agriculture",
+              "type": "central",
+              "ministry": "Ministry of Agriculture & Farmers Welfare",
+              "description": "Earmarked funds within all centrally sponsored agriculture schemes for SC and ST farmers to ensure proportionate benefit flow with enhanced subsidy rates.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["SC", "ST"],
+                "farmer_type": ["small", "marginal"],
+                "states": "all",
+                "additional_criteria": "Valid SC/ST certificate; priority in all agriculture scheme beneficiary lists"
+              },
+              "benefit": "Additional 10–20% subsidy on all major agriculture schemes; priority allotment of subsidised inputs, KCC, PMFBY, SMAM equipment; dedicated extension services",
+              "documents_required": ["Aadhaar card", "Caste certificate (SC/ST) from competent authority", "Land records", "Bank account"],
+              "how_to_apply": "Apply to any agriculture scheme mentioning SC/ST category; automatic priority given; approach district agriculture office for dedicated camp",
+              "apply_link": "https://agricoop.gov.in",
+              "helpline": "1800-180-1551"
+            },
+            {
+              "id": "wadi_nabard",
+              "name": "WADI Programme – NABARD (Tribal Horticulture)",
+              "type": "central",
+              "ministry": "NABARD / Ministry of Tribal Affairs",
+              "description": "Develops small horticulture and forestry-based livelihoods for tribal farming families through plantation of fruit trees (Wadi = small orchard) with convergence of multiple schemes.",
+              "eligibility": {
+                "age_min": 18,
+                "land_size_min_acres": 0.5,
+                "land_size_max_acres": 3,
+                "gender": "all",
+                "social_category": ["ST"],
+                "farmer_type": ["small", "marginal"],
+                "states": ["Rajasthan", "Gujarat", "Maharashtra", "Odisha", "Jharkhand", "Chhattisgarh", "Andhra Pradesh", "Telangana", "Karnataka", "Tamil Nadu"],
+                "additional_criteria": "Exclusively for ST (Scheduled Tribe) farmers in identified tribal belts; must have 0.5–3 acres of land"
+              },
+              "benefit": "Free fruit tree saplings (mango, cashew, amla); Rs 15,000–20,000 per acre for orchard establishment; 5 years of handholding, training, and market linkage",
+              "documents_required": ["Aadhaar card", "ST certificate", "Land records (0.5–3 acres)", "Bank account", "Community membership proof"],
+              "how_to_apply": "Contact NABARD district office or tribal welfare department; implemented through NGO-NABARD partnership",
+              "apply_link": "https://www.nabard.org",
+              "helpline": "022-26539895"
+            }
+          ]
+        },
+        {
+          "id": "tribal_farmer_schemes",
+          "name": "Tribal Farmer Schemes",
+          "schemes": [
+            {
+              "id": "trifed_tribes",
+              "name": "TRIFED – Minor Forest Produce MSP & Tribal Farmers",
+              "type": "central",
+              "ministry": "Ministry of Tribal Affairs / TRIFED",
+              "description": "Ensures fair prices for Minor Forest Produce (MFP) collectors and tribal farmers through MSP mechanism, value addition, and market linkage under Van Dhan Vikas Kendras.",
+              "eligibility": {
+                "age_min": 18,
+                "gender": "all",
+                "social_category": ["ST"],
+                "farmer_type": ["small", "marginal"],
+                "states": ["Andhra Pradesh", "Arunachal Pradesh", "Assam", "Chhattisgarh", "Gujarat", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Rajasthan", "Tamil Nadu", "Telangana", "Tripura", "Uttarakhand", "West Bengal"],
+                "additional_criteria": "Must be tribal forest dwellers or ST farmers; applicable for MFP collection and sale"
+              },
+              "benefit": "MSP for 87 minor forest produce items (Mahua, Tamarind, Sal leaves, Bamboo, etc.); processing support through Van Dhan Vikas Kendras; 15–20% value addition profit",
+              "documents_required": ["Aadhaar card", "ST certificate", "Forest Rights Act certificate if available", "Bank account"],
+              "how_to_apply": "Register with Van Dhan Vikas Kendra (VDVK) in your tribal area; contact state TRIFED office or tribal welfare department",
+              "apply_link": "https://trifed.tribal.gov.in",
+              "helpline": "1800-103-3103"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "eligibility_quick_reference": {
+    "small_marginal_farmer": "Land size <= 2 acres qualifies as marginal; 2–5 acres = small farmer",
+    "sc_st_benefit": "Scheduled Caste and Scheduled Tribe farmers get 10–20% additional subsidy across all schemes and priority selection",
+    "women_farmer_benefit": "Women farmers get priority selection, higher subsidy (up to 80% under SMAM), and dedicated schemes like MKSP",
+    "young_farmer": "Age < 35 qualifies for RKVY-RAFTAAR startup support and PMKVY skill training",
+    "kcc_auto_enrollment": "KCC holders are automatically enrolled for PMFBY crop insurance for notified crops",
+    "universal_schemes": ["PM-KISAN", "PMFBY", "KCC", "Soil Health Card", "eNAM", "ATMA Training"]
+  }
+}
